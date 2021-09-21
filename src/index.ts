@@ -1,6 +1,8 @@
 import '../assets/css/styles.css';
-/* import {todoList} from './config/moduleFunction'; */
-import { txtInputYa } from './components/module-input.component';
+
+import {txtInputYa} from './components/module-input.component';
+import{divTodoListYa} from './components';
 txtInputYa;
-/* console.log(todoList); */
+divTodoListYa;
+
 

@@ -1,8 +1,8 @@
 import {ITodo} from '../data/interfaces/ITodo.class';
-
+import {divTodoList} from '../components/spec/module-variable.component'
 const error=(message:string):never=>{throw new Error(message)};
 //Referencias en el HTML
-const divTodoList:Element|null=document.querySelector('.todo-list');
+
 
 export const createTodoHTML=(todo:ITodo):Element|null=>{
     const HTMLTodo:string=`
@@ -10,8 +10,8 @@ export const createTodoHTML=(todo:ITodo):Element|null=>{
 	    <div class="view">
 		    <input class="toggle" 
                 type="checkbox" ${(todo.completado)?'checked':''}>
-			<label>${todo.tarea}</label>
-			<button class="destroy"></button>
+			  <label>${todo.tarea}</label>
+			  <button class="destroy"></button>
 	    </div>
 	    <input class="edit" value="Create a TodoMVC template">
     </li>`;

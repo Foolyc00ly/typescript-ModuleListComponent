@@ -7,7 +7,7 @@ export const txtInputYa:void|undefined=txtInput?.addEventListener('keyup',(e)=>{
     if((e as KeyboardEvent).key==='Enter' && (<HTMLInputElement>e.target).value.length>0){
         const nuevoTodo:Todo=new Todo((<HTMLInputElement>e.target).value);
         todoList.nuevoTodo(nuevoTodo);
-        console.log(todoList);
+        /* console.log(todoList); */
         createTodoHTML(nuevoTodo);
         (<HTMLInputElement>e.target).value='';
     }

@@ -8,10 +8,15 @@ export class TodoList{
         restArgs.forEach(ra=>this.todos.push(ra));
     }
     eliminarTodo(id:number){
-
+        this.todos=this.todos.filter(t=>t.id!==id);
     }
     marcarCompletado(id:number){
-
+        this.todos.every(t=>{
+            if(t.id===id){
+                t.completado=!t.completado;
+                return false;
+            }
+        })
     }
     eliminarCompletados(){
 
