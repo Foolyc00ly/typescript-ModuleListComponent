@@ -19,6 +19,6 @@ export class TodoList{
         })
     }
     eliminarCompletados(){
-
+        this.todos=this.todos.filter(t=>!t.completado);
     }
 }
