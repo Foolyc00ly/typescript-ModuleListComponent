@@ -15,6 +15,7 @@ export const divTodoListYa:void|undefined=divTodoList?.addEventListener('click',
     if(nameElement.includes('input')){//click en el check
         todoList.marcarCompletado(isNumber);
         (todoElement as HTMLInputElement).classList.toggle('completed')
+        console.log(todoList);
     }else if(nameElement.includes('button')){//borrar el T.O.D.O
         todoList.eliminarTodo(isNumber);
         divTodoList?.removeChild((todoElement as HTMLInputElement));
@@ -22,6 +23,6 @@ export const divTodoListYa:void|undefined=divTodoList?.addEventListener('click',
     console.log(e.target);
     console.log(nameElement);
     console.log(todoElement);
-    console.log(todoId );
+    console.log(isNumber );
 
 });

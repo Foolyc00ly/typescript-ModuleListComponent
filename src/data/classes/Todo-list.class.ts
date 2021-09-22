@@ -16,6 +16,7 @@ export class TodoList{
                 t.completado=!t.completado;
                 return false;
             }
+            return true;
         })
     }
     eliminarCompletados(){

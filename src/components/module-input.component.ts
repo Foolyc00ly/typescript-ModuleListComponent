@@ -8,6 +8,7 @@ export const txtInputYa:void|undefined=txtInput?.addEventListener('keyup',(e)=>{
         const nuevoTodo:Todo=new Todo((<HTMLInputElement>e.target).value);
         todoList.nuevoTodo(nuevoTodo);
         /* console.log(todoList); */
+        console.log((<HTMLInputElement>e.target).value);
         createTodoHTML(nuevoTodo);
         (<HTMLInputElement>e.target).value='';
     }
