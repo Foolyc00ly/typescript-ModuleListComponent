@@ -1,6 +1,6 @@
 import { Todo } from "../data/classes";
 import{todoList} from '../config/moduleFunction';
-import { createTodoHTML } from "./module-list.component";
+import { createTodoHTML } from "./";
 import{txtInput} from './spec/module-variable.component';
 
 export const txtInputYa:void|undefined=txtInput?.addEventListener('keyup',(e)=>{
