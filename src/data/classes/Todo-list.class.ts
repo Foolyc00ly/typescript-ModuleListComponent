@@ -1,5 +1,6 @@
 import{ITodo} from '../interfaces/ITodo.class';
 import{error} from '../../components/spec/module-variable.component'
+import{Todo} from './';
 export class TodoList{
     public todos:ITodo[];
     constructor(){
@@ -38,5 +39,6 @@ export class TodoList{
         this.todos=(localStorage.getItem('todo'))
             ?JSON.parse(localStorage.getItem('todo') || error('No hay Todo'))
             :[];
+        this.todos=this.todos.map(t=>Todo.fromJson(t));
     }
 }
